@@ -34,7 +34,7 @@ def is_less_100(list_of_numbers):
 
 #Repeated Names
 
-#Linearithmic O(n log n)
+#Quadratic (n^2) with a somewhat Linearithmic O(n log n) caveat
 def is_repeated(list_of_names):
     """
     Paramter:
@@ -51,4 +51,23 @@ def is_repeated(list_of_names):
         i += 1
     return False
             
-print(is_repeated(["Josh", "Matt", "Chris", "Josh", "Chad", "Andy"]))
+#print(is_repeated(["Josh", "Matt", "Chris", "Josh", "Chad", "Andy"]))
+
+
+#Quadratic (n^2) 
+def refactor_is_repeated(list_of_names):
+    """
+    Paramter:
+    list_of_names : [str] -> The list of strings to check for repeated values
+
+    Return
+    bool -> True if value is repeated, False if no values are repeated
+    """
+    for name in list_of_names:
+        x = list_of_names.count(name)
+        if x > 1:
+            return True
+    return False
+#print(refactor_is_repeated(["Jane", "Matt", "Chris", "Josh", "Chad", "Andy"]))
+
+
