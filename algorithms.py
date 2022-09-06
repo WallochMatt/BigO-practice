@@ -71,3 +71,37 @@ def refactor_is_repeated(list_of_names):
 #print(refactor_is_repeated(["Jane", "Matt", "Chris", "Josh", "Chad", "Andy"]))
 
 
+
+# Sort List
+#Quadratic (n^2) 
+def sorts_list(list_of_numbers):
+    for index in range(len(list_of_numbers)):
+        for num in range(len(list_of_numbers)):
+        #while index != (len(list_of_numbers)-1):
+            if (list_of_numbers[index]) < (list_of_numbers[num]):
+                temp = list_of_numbers[index]
+                list_of_numbers[index] = list_of_numbers[num]
+                list_of_numbers[num] = temp
+    return list_of_numbers
+
+
+
+
+
+
+
+
+
+    # temp_list = []
+    # for index in range(len(list_of_numbers)):
+    #     for number in range(len(list_of_numbers)):
+    #         if list_of_numbers[index] > list_of_numbers[number]:
+    #             temp_list.append(list_of_numbers[number])
+    #         else:
+    #             temp_list.append(list_of_numbers[index])
+               
+    #             print("smaller")
+            
+
+
+print(sorts_list([5, 7, 3, 4]))
